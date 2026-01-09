@@ -16,15 +16,15 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#DC2626", // Changed to Red/Mega brand color approximation
-                        "primary-dark": "#B91C1C",
+                        primary: "#0EA5E9", // Restored Sky Blue
+                        "primary-dark": "#0284C7",
                         "background-light": "#FFFFFF",
                         "background-dark": "#0d1117", 
                         "surface-light": "#F3F4F6",
                         "surface-dark": "#161b22", 
                         "border-light": "#E5E7EB",
                         "border-dark": "#30363d", 
-                        "accent": "#ef4444", 
+                        "accent": "#2f81f7", // GitHub blue
                     },
                     fontFamily: {
                         display: ["Inter", "sans-serif"],
@@ -40,8 +40,8 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
-        /* Updated gradient to match Mega-ish branding (Red/Dark) */
-        .logo-gradient { background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%); }
+        /* Restored Blue Gradient */
+        .logo-gradient { background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%); }
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 5px; }
@@ -73,7 +73,7 @@
 </nav>
 
 <header class="relative pt-20 pb-24 sm:pt-32 sm:pb-32 overflow-hidden bg-background-light dark:bg-background-dark">
-    <div class="absolute inset-0 z-0 opacity-[0.4] dark:opacity-[0.15]" style="background-image: radial-gradient(#ef4444 1px, transparent 1px); background-size: 32px 32px;">
+    <div class="absolute inset-0 z-0 opacity-[0.4] dark:opacity-[0.15]" style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 32px 32px;">
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="inline-flex items-center space-x-2 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wide mb-8 shadow-sm">
@@ -82,11 +82,11 @@
         </div>
         <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-8 text-slate-900 dark:text-white leading-tight">
             Mega Account <br class="hidden sm:block"/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-600 dark:from-red-500 dark:to-orange-400">Generator GUI</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600 dark:from-sky-400 dark:to-blue-500">Generator GUI</span>
         </h1>
         <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-light">
             The advanced, open-source tool to bulk generate Mega.nz accounts. <br class="hidden md:inline"/>
-            Featuring Proxy support, CustomTkinter GUI, and multithreading.
+            Featuring CustomTkinter GUI, integrated tools, and multithreading.
         </p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-20">
             <a class="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg font-bold shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all transform hover:-translate-y-1 text-center flex justify-center items-center gap-2" href="https://github.com/byPancra/Mega-Account-Generator-GUI/releases">
@@ -113,7 +113,7 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 pointer-events-none"></div>
                     <p class="mb-2"><span class="text-green-400">user@pc</span> <span class="text-slate-500">:</span> <span class="text-blue-400">~/Mega-Gen</span>$ pip install -r requirements.txt</p>
                     <p class="mb-2 text-slate-400">Requirement already satisfied: customtkinter in ...</p>
-                    <p class="mb-2"><span class="text-green-400">user@pc</span> <span class="text-slate-500">:</span> <span class="text-blue-400">~/Mega-Gen</span>$ python main.py</p>
+                    <p class="mb-2"><span class="text-green-400">user@pc</span> <span class="text-slate-500">:</span> <span class="text-blue-400">~/Mega-Gen</span>$ python gui.py</p>
                     <p class="mb-4 text-green-500">[SUCCESS] GUI Interface Loaded Successfully.</p>
                     
                     <div class="border border-slate-700 rounded bg-[#161b22] p-4 max-w-md mx-auto mt-8 shadow-xl relative z-10 transform transition-transform group-hover:scale-[1.02] duration-500">
@@ -125,10 +125,10 @@
                         <div class="space-y-3">
                             <div class="flex justify-between text-xs text-slate-400">
                                 <span>Threads: 5</span>
-                                <span>Proxies: ON (SOCKS5)</span>
+                                <span>Status: Active</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full w-full mt-2 overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-red-600 to-red-400 w-[65%] animate-pulse"></div>
+                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-400 w-[65%] animate-pulse"></div>
                             </div>
                             <div class="flex justify-between items-center mt-2">
                                 <span class="text-xs text-slate-300">Generated: <span class="text-white font-bold">65</span></span>
@@ -155,16 +155,16 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="p-6 rounded-2xl bg-white dark:bg-[#161b22] border border-border-light dark:border-border-dark shadow-sm hover:shadow-md hover:border-primary/50 transition-all group">
-                <div class="w-10 h-10 rounded-lg bg-red-50 dark:bg-red-900/20 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
-                    <span class="material-symbols-outlined">hub</span>
+                <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined">verified_user</span>
                 </div>
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Proxy Support</h3>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Smart Verification</h3>
                 <p class="text-sm text-slate-500 dark:text-slate-400">
-                    Avoid IP bans. Supports HTTP/S, SOCKS4, and SOCKS5 proxies loaded directly from text files.
+                    Automated email verification loops with intelligent retry logic for maximum success rates.
                 </p>
             </div>
             <div class="p-6 rounded-2xl bg-white dark:bg-[#161b22] border border-border-light dark:border-border-dark shadow-sm hover:shadow-md hover:border-primary/50 transition-all group">
-                <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4 group-hover:scale-110 transition-transform">
+                <div class="w-10 h-10 rounded-lg bg-cyan-50 dark:bg-cyan-900/20 flex items-center justify-center text-cyan-600 dark:text-cyan-400 mb-4 group-hover:scale-110 transition-transform">
                     <span class="material-symbols-outlined">memory</span>
                 </div>
                 <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Multithreaded</h3>
@@ -187,7 +187,7 @@
 
 <section class="py-24 bg-background-light dark:bg-background-dark relative overflow-hidden" id="run-modes">
     <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl dark:opacity-10"></div>
-    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl dark:opacity-10"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl dark:opacity-10"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16 text-slate-900 dark:text-white">Deployment Methods</h2>
@@ -197,7 +197,7 @@
                 <div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Recommended</div>
                 <div class="p-8 flex-1 flex flex-col">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="p-3 bg-gradient-to-br from-primary to-orange-600 rounded-lg text-white shadow-lg shadow-orange-500/30">
+                        <div class="p-3 bg-gradient-to-br from-primary to-blue-600 rounded-lg text-white shadow-lg shadow-blue-500/30">
                             <i class="fab fa-python text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white">Python Source</h3>
@@ -217,7 +217,7 @@
                     </ul>
                     <div class="mt-auto bg-slate-100 dark:bg-slate-900 p-3 rounded text-xs font-mono text-slate-600 dark:text-slate-400 mb-3 border border-slate-200 dark:border-slate-700">
                         pip install -r requirements.txt<br>
-                        python main.py
+                        python gui.py
                     </div>
                     <a class="w-full py-3 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold transition-colors text-center text-sm shadow-md" href="https://github.com/byPancra/Mega-Account-Generator-GUI">
                         Get Source Code
@@ -263,7 +263,7 @@
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white">Windows .exe</h3>
                     </div>
                     <p class="text-slate-600 dark:text-slate-400 mb-6 flex-1">
-                        Check releases for pre-compiled binaries. Note: Antivirus may flag compiled python scripts false-positively.
+                        Comes with integrated <strong>Megatool</strong>. No external installation or dependencies required.
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start text-sm text-slate-500 dark:text-slate-400">
